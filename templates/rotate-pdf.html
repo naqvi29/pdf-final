@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block title %}ROTATE PDF{% endblock %}
+{% block content %}
+    
+        <div class="row justify-content-center pt-4 pb-5">
+            <div class="col-12 col-md-11 col-lg-8 text-center">
+                <h1 class="font-weight-bold">
+                   <span class="text-orange">
+                    Rotate PDF<br>
+                   </span> Rotate your pdfs as you want
+                </h1>  
+
+                <p class="py-5">11+ tools on SEO, content marketing, competitor research, PPC and social media marketing to help you attract and grow your audience online faster.</p>
+    
+                <div class="drag-area mt-4" data-validextensions="application/pdf">
+                    <div class="icon"><i class="bi bi-cloud-upload-fill"></i></div>
+                    <p class="header">Drag & Drop to Upload File</p>
+                    <p class="font-weight-bold">OR</p>
+                    <button id="multiFileUploader" class="btn btn-success mb-4">Browse File</button>
+                    <input id="multiFileinput" type="file" accept="application/pdf" multiple hidden>
+                </div><br>
+                
+                <div class="py-3 text-left">
+                	<select id="rotateAngleFun" class="form-select" aria-label="Default select example" styel="max-width:300px;">
+  					<option selected value="90">Rotaing angle</option>
+  					<option value="90">90°</option>
+  					<option value="180">180°</option>
+  <option value="270">-90°</option>
+</select>
+                </div>
+
+                <div class="text-left">
+                    <button id="start-button" type="button" class="btn btn-primary btn-lg py-1 mt-4" onclick="rotate_pdf()">
+                        <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                        Start
+                    </button>
+                    
+                                         <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse0" style="display:none;">
+                    <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                    Download
+                    </a>
+                    <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse1"
+                style="display:none;">
+                <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                Download
+            </a>
+            <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse2"
+                style="display:none;">
+                <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                Download
+            </a>
+            <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse3"
+                style="display:none;">
+                <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                Download
+            </a>
+
+
+            <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse4"
+                style="display:none;">
+                <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                Download
+            </a>
+            <a target="_blank" type="button" class="btn btn-primary btn-lg py-1 mt-4" href="" id="dataResponse5"
+                style="display:none;">
+                <i class="bi bi-balloon-heart-fill" style="padding-right: 2px;"></i>
+                Download
+            </a>
+                </div>
+    
+                <div id="filesNameArea" class="py-4">
+                </div>
+
+                <hr class="mt-5">
+
+            </div>
+        </div>
+{% endblock %}
